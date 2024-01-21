@@ -1,0 +1,112 @@
+[
+    {
+        "id": "1",
+        "nazwa": "Włoskie Szlaki Wina",
+        "kraj": "Włochy",
+        "rozpoczęcie": "2022-09-05",
+        "zakończenie": "2022-09-15",
+        "cena": "1350",
+        "max_uczestników": "12",
+        "opis": "Podróż po winnicach w malowniczych regionach Włoch",
+        "zdjecie": "https://images.pexels.com/photos/2064827/pexels-photo-2064827.jpeg?auto=compress&cs=tinysrgb&w=400"
+    },
+    {
+        "id": "2",
+        "nazwa": "Zimowa Magia Norwegii",
+        "kraj": "Norwegia",
+        "rozpoczęcie": "2023-01-20",
+        "zakończenie": "2023-01-28",
+        "cena": "1600",
+        "max_uczestników": "10",
+        "opis": "Zimowe atrakcje w pięknych norweskich krajobrazach",
+        "zdjecie": "https://images.pexels.com/photos/3384695/pexels-photo-3384695.jpeg?auto=compress&cs=tinysrgb&w=400"
+    },
+    {
+        "id": "3",
+        "nazwa": "Hiszpańska Kuchnia i Flamenco",
+        "kraj": "Hiszpania",
+        "rozpoczęcie": "2021-07-12",
+        "zakończenie": "2021-07-20",
+        "cena": "1100",
+        "max_uczestników": "8",
+        "opis": "Kulinarne doznania i tradycyjne flamenco w Hiszpanii",
+        "zdjecie": "https://images.pexels.com/photos/1703311/pexels-photo-1703311.jpeg?auto=compress&cs=tinysrgb&w=400"
+    },
+    {
+        "id": "4",
+        "nazwa": "Japońskie Ogrody i Kultura",
+        "kraj": "Japonia",
+        "rozpoczęcie": "2023-04-03",
+        "zakończenie": "2023-04-12",
+        "cena": "1800",
+        "max_uczestników": "14",
+        "opis": "Zwiedzanie tradycyjnych ogrodów i świątyń w Japonii",
+        "zdjecie": "https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id": "5",
+        "nazwa": "Greckie Wyspy Rajskie",
+        "kraj": "Grecja",
+        "rozpoczęcie": "2022-06-15",
+        "zakończenie": "2022-06-25",
+        "cena": "1250",
+        "max_uczestników": "10",
+        "opis": "Słoneczne wakacje na urokliwych greckich wyspach",
+        "zdjecie": "https://images.pexels.com/photos/164336/pexels-photo-164336.jpeg?auto=compress&cs=tinysrgb&w=400"
+    },
+    {
+        "id": "6",
+        "nazwa": "Safari w Serengeti",
+        "kraj": "Tanzania",
+        "rozpoczęcie": "2023-08-10",
+        "zakończenie": "2023-08-20",
+        "cena": "2000",
+        "max_uczestników": "16",
+        "opis": "Spotkanie z dziką przyrodą w słynnym parku Serengeti",
+        "zdjecie": "https://images.pexels.com/photos/891116/pexels-photo-891116.jpeg?auto=compress&cs=tinysrgb&w=400"
+    },
+    {
+        "id": "7",
+        "nazwa": "Egipskie Przygody",
+        "kraj": "Egipt",
+        "rozpoczęcie": "2024-02-05",
+        "zakończenie": "2024-02-15",
+        "cena": "1400",
+        "max_uczestników": "12",
+        "opis": "Odkrywanie tajemnic starożytnego Egiptu",
+        "zdjecie": "https://images.pexels.com/photos/262786/pexels-photo-262786.jpeg?auto=compress&cs=tinysrgb&w=400"
+    },
+    {
+        "id": "8",
+        "nazwa": "Sesje Nurkowe na Wyspach Galapagos",
+        "kraj": "Ekwador",
+        "rozpoczęcie": "2022-11-08",
+        "zakończenie": "2022-11-18",
+        "cena": "2200",
+        "max_uczestników": "8",
+        "opis": "Podwodne przygody w jednym z najbardziej unikalnych miejsc na ziemi",
+        "zdjecie": "https://images.pexels.com/photos/6034712/pexels-photo-6034712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id": "9",
+        "nazwa": "Rumuńskie Zamki i Legendy",
+        "kraj": "Rumunia",
+        "rozpoczęcie": "2021-12-03",
+        "zakończenie": "2021-12-12",
+        "cena": "950",
+        "max_uczestników": "10",
+        "opis": "Podróż do tajemniczych zamków i miejsc z rumuńskimi legendami",
+        "zdjecie": "https://images.pexels.com/photos/163572/iron-gate-karparten-danube-gorge-abbey-163572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id": "10",
+        "nazwa": "Kulturowe Safari w Indiach",
+        "kraj": "Indie",
+        "rozpoczęcie": "2022-03-22",
+        "zakończenie": "2022-03-30",
+        "cena": "1700",
+        "max_uczestników": "14",
+        "opis": "Odkrywanie różnorodności kulturowej i historycznej Indii",
+        "zdjecie": "https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+]

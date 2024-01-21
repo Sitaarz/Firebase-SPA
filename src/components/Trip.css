@@ -1,0 +1,49 @@
+.trip-frame{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.red-background{
+    background-color: #ff3800;
+}
+
+.wycieczka[style*="border: 2px solid red"] {
+    background-color: lightcoral;
+  }
+  
+  /* Dodatkowe style dla wycieczki o najwyższej cenie jednostkowej */
+  .wycieczka[style*="border: 2px solid green"] {
+    background-color: lightgreen;
+  }
+
+  .red-border{
+    border: 2px solid red;
+  }
+
+  .green-border{
+    border: 2px solid green;
+  }
+
+.deleting-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.link-bez-stylu {
+  text-decoration: none;
+  color: inherit;
+}

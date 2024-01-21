@@ -1,0 +1,13 @@
+#trip-picture{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#picture-div{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
