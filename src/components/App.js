@@ -7,6 +7,10 @@ import AddTrip from './AddTrip';
 import TripPage from './TripPage';
 import SearchComponent from './SearchComponent';
 
+import { collection, addDoc, getDocs  } from "firebase/firestore";
+
+import {db} from '../firebase';
+
 import {
   BrowserRouter,
   Routes,
@@ -39,16 +43,30 @@ class App extends Component {
     currentMaxPrice:0
   }
 
-  componentDidMount() {
-    fetch('./wycieczki.json')
-      .then(response => response.json())
-      .then(trips => {
-        const tripsWithRate = trips.map(trip => {
-          trip.ocena = 0;
-          return trip;
+   fetchPost = async () => {
+       
+    await getDocs(collection(db, "tours"))
+        .then((querySnapshot)=>{               
+            const newData = querySnapshot.docs
+                .map((doc) => ({...doc.data(), id:doc.id }));
+                            
+                console.log(newData)
+                this.setState({ trips:newData, tripsToSearch:newData })
         })
-        this.setState({ trips:tripsWithRate, tripsToSearch:tripsWithRate })
-      } )  
+   
+}
+
+  componentDidMount() {
+    // fetch('./wycieczki.json')
+    //   .then(response => response.json())
+    //   .then(trips => {
+    //     const tripsWithRate = trips.map(trip => {
+    //       trip.ocena = 0;
+    //       return trip;
+    //     })
+    //     this.setState({ trips:tripsWithRate, tripsToSearch:tripsWithRate })
+    //   } )  
+    this.fetchPost();
   }
 
   componentDidUpdate() {
@@ -68,10 +86,9 @@ class App extends Component {
 
   deleteTrip = (id) => {
     const newTripsArray = this.state.trips.filter(trip => trip.id !== id)
-    const newTripsArray2 = this.state.tripsToSearch.filter(trip => trip.id !== id)
     this.setState({
       trips: newTripsArray,
-      tripsToSearch: newTripsArray2
+      tripsToSearch: newTripsArray
     })
   }
 
@@ -98,13 +115,20 @@ class App extends Component {
   description={trip.opis} picture={trip.zdjecie} deleteTrip={this.deleteTrip} sendValue = {this.sendValue} getPrices = {this.sendPrices}
     />))
   
-  giveMaxTripId = () => Math.max(...this.state.trips.map(trip => trip.id))
+  giveMaxTripId = () => Math.max(this.state.trips.map(trip => trip.id))
 
-  addTrip = (newTripData) => {
-    newTripData.id = this.giveMaxTripId() + 1;
+  addTrip = async (newTripData) => {
+    newTripData.id = (this.giveMaxTripId() + 1);
     this.setState({
       trips: [...this.state.trips, newTripData]
     })
+
+    try {
+      const docRef = await addDoc(collection(db, "tours"), newTripData);
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
   }
 
   
@@ -148,10 +172,12 @@ class App extends Component {
   }
 
   setTripRate = (id, rate) => {
-    const trip = this.state.trips.find(trip => parseInt(trip.id) == parseInt(id))
+    console.log(id, rate)
+    const trip = this.state.trips.find(trip => trip.id == id)
     trip.ocena = rate;
     this.setState({
-      trips: [...this.state.trips]
+      trips: [...this.state.trips],
+      tripsToSearch: [...this.state.tripsToSearch]
     })
   }
 

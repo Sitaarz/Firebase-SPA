@@ -7,6 +7,8 @@ const TripInfo = (props) => {
     const currency = props.isEuro() ? "€" : "zł"
     const price = props.isEuro() ? (props.price / 4.3).toFixed(2) : props.price
 
+    
+
     return(
     <div id="trip-info">
         <p id="info-title">{props.name}</p>

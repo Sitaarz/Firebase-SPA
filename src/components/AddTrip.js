@@ -32,7 +32,7 @@ class AddTrip extends Component {
 
     handleInputChange = (event) => {
         const name = event.target.name;
-        console.log(event.target.value)
+        // console.log(event.target.value)
         this.setState({
             [name]: event.target.value
         })
@@ -54,6 +54,8 @@ class AddTrip extends Component {
 
             showMessage: true,
         })
+
+        
         
     }
 
